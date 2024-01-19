@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+const dbUrl = process.env.DB_URL;
 mongoose
-  .connect("mongodb://127.0.0.1:27017/poc-dynamic")
+  .connect(dbUrl)
   .then((res) => {
     console.log("succesfully connection");
   })
